@@ -1,0 +1,19 @@
+{
+  "name": "homepage",
+  "version": "0.0.1",
+  "description": "iNulty homepage",
+  "main": "index.js",
+  "repository": "http://www.github.com/nulty/inulty-homepage",
+  "author": "Iain McNulty <iain@inulty.com>",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/preset-env": "^7.14.4",
+    "rollup": "^2.50.5",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-postcss": "^4.0.0",
+    "rollup-plugin-terser": "^7.0.2"
+  }
+}
