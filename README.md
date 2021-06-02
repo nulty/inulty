@@ -24,5 +24,6 @@ Development:
 
     $ export FLASK_ENV=development
 
+    $ yarn rollup --config --watch # devlopment server
 
 
