@@ -5,7 +5,11 @@ module.exports = {
   },
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: theme => ({
+        'hero-pattern': "url('/static/images/london.jpg')"
+      }),
+    },
     fontFamily: {
       'hero': ['Poppins']
     }
