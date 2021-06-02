@@ -1,17 +1,26 @@
+import path from 'path'
 import babel from 'rollup-plugin-babel';
 // import eslint from 'rollup-plugin-eslint';
-// import resolve from 'rollup-plugin-node-resolve';
-// import commonjs from 'rollup-plugin-commonjs';
-// import replace from 'rollup-plugin-replace';
-// import uglify from 'rollup-plugin-uglify';
-// import postcss from 'rollup-plugin-postcss';
-
+import resolve from 'rollup-plugin-node-resolve';
+import commonjs from 'rollup-plugin-commonjs';
+import postcss from 'rollup-plugin-postcss';
 
 export default {
   input: 'src/main.js',
   output: {
-    file: 'dist/bundle.js',
-    format: 'es'
+    file: 'static/bundle.js',
+    format: 'iife'
   },
-  plugins: [ babel() ]
+  plugins: [
+    commonjs(),
+    postcss({
+      config: {
+        path: './postcss.config.js'
+      },
+      use: {
+        sass: { javascriptEnabled: true }
+      }
+    }),
+    babel(),
+  ]
 };

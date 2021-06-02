@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <title></title>
-  <script href="../dist/bundle.js"/>
+  <script src="{{url_for('static', filename='bundle.js')}}"></script>
 </head>
 <body>
-  {% block body %}{% endblock %}
+  {% block body %}
+  {% endblock %}
 </body>
 </html>
 
